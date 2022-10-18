@@ -1,0 +1,118 @@
+{
+  "project_info": {
+    "project_number": "525463140997",
+    "project_id": "vrd-app-de516",
+    "storage_bucket": "vrd-app-de516.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525463140997:android:032ccba003746e7bcb47ec",
+        "android_client_info": {
+          "package_name": "com.vrd.framtidsverket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525463140997-k1fcat6lu8g9q9tplndmgalnntp36kqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARZs785cy0QwiT5qCT_BjH1lYse3v7vKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525463140997-8dl3q52kss40dedq9gkdh4c0glgegg5e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525463140997-bs3ckbtkim3je2tdpfgjes0a6fcmlril.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SourcingSquare.VRD123"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525463140997:android:75fb9aa9b1b13f6ecb47ec",
+        "android_client_info": {
+          "package_name": "com.vrd.gsaf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525463140997-k1fcat6lu8g9q9tplndmgalnntp36kqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARZs785cy0QwiT5qCT_BjH1lYse3v7vKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525463140997-8dl3q52kss40dedq9gkdh4c0glgegg5e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525463140997-bs3ckbtkim3je2tdpfgjes0a6fcmlril.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SourcingSquare.VRD123"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525463140997:android:3dd65193442ed416cb47ec",
+        "android_client_info": {
+          "package_name": "com.vrd.vcd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "525463140997-k1fcat6lu8g9q9tplndmgalnntp36kqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARZs785cy0QwiT5qCT_BjH1lYse3v7vKQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "525463140997-8dl3q52kss40dedq9gkdh4c0glgegg5e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "525463140997-bs3ckbtkim3je2tdpfgjes0a6fcmlril.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "SourcingSquare.VRD123"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

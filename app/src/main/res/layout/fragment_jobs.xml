@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".home.jobs.Jobs">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#182641">
+
+        <include
+            android:id="@+id/noDataLayout"
+            layout="@layout/no_data_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/somethingWentWrongLayout"
+            layout="@layout/something_went_wrong_layout"
+            android:visibility="gone" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/RedAccent"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/menuImageView"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/menu"
+                android:elevation="@dimen/_8sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/backImageView"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/back_arrow"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/filterImageView"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:background="@drawable/filter"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/searchJobImageView"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_16sdp"
+                android:background="@drawable/search"
+                android:backgroundTint="@color/white"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/titleTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:gravity="center"
+                android:text="@string/dashBoardJobs"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/searchJobTitleEdt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:background="@drawable/rounded_cornor_btn_white"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Search by job title"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_32sdp"
+            android:paddingEnd="@dimen/_5sdp"
+
+            android:singleLine="true"
+            android:textColor="@color/appColor"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/searchImageView"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:background="@drawable/title_search_icon"
+            android:drawableTint="@color/appColor"
+            app:layout_constraintBottom_toBottomOf="@id/searchJobTitleEdt"
+            app:layout_constraintLeft_toLeftOf="@id/searchJobTitleEdt"
+            app:layout_constraintTop_toTopOf="@id/searchJobTitleEdt"
+
+            />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/searchJobTitleImageView"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="@dimen/_16sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:background="@drawable/search"
+            android:drawableTint="@color/appColor"
+            android:elevation="@dimen/_50sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/searchJobTitleEdt"
+            app:layout_constraintRight_toRightOf="@id/searchJobLocationEdt"
+            app:layout_constraintTop_toTopOf="@id/searchJobTitleEdt"
+
+            />
+
+
+        <EditText
+            android:id="@+id/searchJobLocationEdt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_marginLeft="@dimen/_24sdp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="@dimen/_24sdp"
+            android:background="@drawable/rounded_cornor_btn_white"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Search by job location"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_32sdp"
+            android:singleLine="true"
+            android:textColor="@color/appColor"
+            android:textColorHint="#000000"
+            android:textSize="@dimen/_8sdp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchJobTitleEdt" />
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/searchImageView2"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:background="@drawable/location"
+            android:drawableTint="@color/appColor"
+            app:layout_constraintBottom_toBottomOf="@id/searchJobLocationEdt"
+            app:layout_constraintLeft_toLeftOf="@id/searchJobLocationEdt"
+            app:layout_constraintTop_toTopOf="@id/searchJobLocationEdt"
+
+            />
+
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:orientation="horizontal"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchJobLocationEdt">
+
+            <TextView
+                android:id="@+id/selectedTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clear Filter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8sdp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginBottom="@dimen/_44sdp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterLayout"
+            tools:context="example.javatpoint.com.recyclerviewlist.MainActivity">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_160sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filterLayout"
+            app:shimmer_duration="2500"
+            app:shimmer_highlight_alpha="0.5"
+            app:shimmer_repeat_mode="restart"
+            app:shimmer_shape="linear">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+
+                <include layout="@layout/view_jobs_shimmer"></include>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

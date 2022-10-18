@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Global study broad fair</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">name@vrd.comsfzafszacsd dsfadszasazs</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="back">Back</string>
+    <string name="select_your_event">Select Your Event</string>
+    <string name="continue_">Continue</string>
+    <string name="register_title">Register</string>
+    <string name="name">Name</string>
+    <string name="forn_hint"><font size="10">Type here</font></string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="company_name">Company Name</string>
+    <string name="job_title">Job Title</string>
+    <string name="register">Register</string>
+    <string name="login"> Login</string>
+    <string name="already_have_an_account">Already have an account? </string>
+    <string name="agree_with">agree with </string>
+    <string name="terms_amp_amp_conditions">Terms &amp; Conditions</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in">LOG IN</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="otp">OTP</string>
+    <string name="enter_otp">Enter Otp</string>
+    <string name="verify">Verify</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="home"> Home</string>
+    <string name="exhibitions">Exhibitions</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="speakers">Speakers</string>
+    <string name="companies">Companies</string>
+    <string name="dashBoardJobs">Jobs</string>
+    <string name="courses">Courses</string>
+    <string name="goodie_bag">Goodie Bag</string>
+    <string name="exit_survey">Exit Survey</string>
+    <string name="upload_cv">Upload CV</string>
+    <string name="choose_file">Choose File</string>
+    <string name="cv_instructions">Only upload CV in doc,docx and pdf format.</string>
+    <string name="about_us">About Us</string>
+
+
+</resources>

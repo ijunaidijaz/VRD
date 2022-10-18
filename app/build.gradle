@@ -1,0 +1,272 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+
+    lintOptions {
+
+        checkReleaseBuilds false
+
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.vrd.gsaf"
+        minSdk 24
+        targetSdk 31
+        versionCode 16
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk.abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        minSdkVersion 24
+
+
+    }
+    signingConfigs {
+        debug {
+            storeFile file('/Users/a1398/Desktop/GSAFKey')
+            storePassword '12345678'
+            keyAlias 'Lansera'
+            keyPassword '12345678'
+        }
+        release {
+            storeFile file('/Users/a1398/Desktop/GSAFKey')
+            storePassword "12345678"
+            keyAlias "Lansera"
+            keyPassword "12345678"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+//            multiDexEnabled true
+//            minifyEnabled true
+//            shrinkResources true
+
+//            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+    flavorDimensions "version"
+    productFlavors {
+        gsaf {
+            resValue "string", "build_type", "Version " + defaultConfig.versionName
+            resValue "string", "my_app_name", "Global Study Abroad Fair"
+            applicationId "com.vrd.gsaf"
+            manifestPlaceholders = [file_provider: "com.vrd.gsaf",
+                                    appIcon      : "@mipmap/app_icon",
+                                    applicationLabel      : "Global Study Abroad Fair",
+                                    appIconRound : "@mipmap/app_icon_round"]
+            buildConfigField "String", "BASE_URL", "\"https://api.lansera.io/\""
+            buildConfigField "String", "APP_COLOR", "\"#3949ab\""
+            buildConfigField "String", "APP_MID_COLOR", "\"#9FA5DD\""
+            buildConfigField "String", "END_COLOR", "\"#EEEEEE\""
+            buildConfigField "String", "APP_ID", "\"345881118544\""
+            buildConfigField "String", "APP_LOGO", "\"https://assets.virtualrecruitmentdays.com/comon/gsaf.png\""
+            buildConfigField "String", "APP_KEY", "\"\$2y\$10\$cht3FVOTOHadLHSigUCaiukvtCCXUOcJZjKOUWHg/OnqfauaOwktq\""
+            buildConfigField "String", "linkedIn_client_id", "\"77p2w9dtp892fw\""
+            buildConfigField "String", "linkedIn_client_secret", "\"5uE9BtGh4fkcBKn6\""
+            buildConfigField "String", "linkedIn_redirect_url", "\"https://www.linkedin.com/developers/tools/oauth/redirect\""
+            buildConfigField "String", "google_client_id", "\"542250737034-bemru66kcb3kgt6i3jc8ppbgqlkamrel.apps.googleusercontent.com\""
+            buildConfigField "String", "google_client_secret", "\"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\""
+        }
+        vcd {
+            resValue "string", "build_type", "Version " + defaultConfig.versionName
+            resValue "string", "my_app_name", "Virtual Career Days – VCD"
+            applicationId "com.vrd.vcd"
+            manifestPlaceholders = [file_provider: "com.vrd.vcd",
+                                    appIcon      : "@mipmap/app_icon_vcd",
+                                    applicationLabel      : "Virtual Career Days – VCD",
+                                    appIconRound : "@mipmap/app_icon_vcd_round"]
+            buildConfigField "String", "BASE_URL", "\"https://api.lansera.io/\""
+            buildConfigField "String", "APP_ID", "\"87895258428\""
+            buildConfigField "String", "APP_COLOR", "\"#432c84\""
+            buildConfigField "String", "APP_MID_COLOR", "\"#ed3980\""
+            buildConfigField "String", "END_COLOR", "\"#fcdbd4\""
+            buildConfigField "String", "APP_LOGO", "\"https://assets.virtualrecruitmentdays.com/comon/vcd.png\""
+            buildConfigField "String", "APP_KEY", "\"\$2y\$10\$.kXkY.led4HlijMENeFjYOUJTYz.u6z3eqe9V3pcDnQpagNC81Q7O\""
+            buildConfigField "String", "linkedIn_client_id", "\"78tta6tp5ajtry\""
+            buildConfigField "String", "linkedIn_client_secret", "\"W4G5Heae2EZtubfF\""
+            buildConfigField "String", "linkedIn_redirect_url", "\"https://www.linkedin.com/developers/tools/oauth/redirectvcd\""
+            buildConfigField "String", "google_client_id", "\"324733945884-v06ds8jvkv1f80tu7cjp49kmaaj21g7q.apps.googleusercontent.com\""
+            buildConfigField "String", "google_client_secret", "\"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\""
+
+        }
+        framtidsverket {
+            resValue "string", "build_type", "Version " + defaultConfig.versionName
+            resValue "string", "my_app_name", "Framtidsverket"
+            applicationId "com.vrd.framtidsverket"
+            manifestPlaceholders = [file_provider: "com.vrd.framtidsverket",
+                                    appIcon      : "@mipmap/app_icon_fram",
+                                    applicationLabel      : "Framtidsverket",
+                                    appIconRound : "@mipmap/app_icon_fram_round"]
+            buildConfigField "String", "BASE_URL", "\"https://api.lansera.io/\""
+            buildConfigField "String", "APP_ID", "\"202182158031\""
+            buildConfigField "String", "APP_LOGO", "\"https://assets.virtualrecruitmentdays.com/comon/fm.png\""
+            buildConfigField "String", "APP_KEY", "\"\$2y\$10\$UbMtzudyiujIkKEHdLRtOOnpHCKA89Zmrgn0P.MZHoOQOU90V.X6W\""
+            buildConfigField "String", "APP_COLOR", "\"#3949ab\""
+            buildConfigField "String", "APP_MID_COLOR", "\"#9FA5DD\""
+            buildConfigField "String", "END_COLOR", "\"#EEEEEE\""
+            buildConfigField "String", "linkedIn_client_id", "\"78vistascfojn8\""
+            buildConfigField "String", "linkedIn_client_secret", "\"Glw1kYrzvLSpbfYO\""
+            buildConfigField "String", "linkedIn_redirect_url", "\"https://www.linkedin.com/developers/tools/oauth/redirectfram\""
+            buildConfigField "String", "google_client_id", "\"299486284176-i2pg7l26t813t76588nvdspj20ujjkq0.apps.googleusercontent.com\""
+            buildConfigField "String", "google_client_secret", "\"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\""
+
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    packagingOptions {
+        pickFirst 'lib/**/libc++_shared.so'
+        exclude 'project.properties'
+        exclude 'META-INF/INDEX.LIST'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/DEPENDENCIES'
+        //microsoft
+        exclude("META-INF/jersey-module-version")
+
+
+    }
+//    compileSdkVersion 29
+
+    configurations.all {
+        //resolutionStrategy { force 'androidx.core:core:1.6.0' }
+//        resolutionStrategy {
+//            force "com.facebook.soloader:soloader:0.8.2"
+//        }
+
+    }
+
+
+}
+
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+
+    implementation 'androidx.appcompat:appcompat:1.4.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-appdistribution-gradle:2.2.0'
+    implementation 'com.google.android.gms:play-services-cast-framework:21.0.1'
+    implementation project(path: ':linkedin-sdk')
+
+    testImplementation 'junit:junit:'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.google.android.gms:play-services-auth:20.0.1'
+
+//    //picasso
+//    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+
+
+    //cache video
+    implementation 'com.danikula:videocache:2.7.1'
+
+
+    //circularImageView
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+
+    implementation 'com.google.code.gson:gson:2.8.7'
+
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+//    implementation 'com.cometchat:pro-android-chat-sdk:3.0.1'
+
+    implementation project(path: ':uikit')
+    implementation project(path: ':chip-navigation-bar')
+//    implementation project(':mobilertc')
+    implementation project(':commonlib')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.google.android.material:material:1.6.0-alpha01'
+//    implementation 'com.cometchat:pro-android-calls-sdk:2.1.1'
+    implementation 'com.cometchat:pro-android-chat-sdk:3.0.4'
+    implementation 'com.cometchat:pro-android-calls-sdk:2.1.2-beta6'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.dhaval2404:imagepicker:2.1'
+
+
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+
+
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+//    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
+    implementation 'sun.bob:mcalendarview:1.0.0'
+
+    implementation 'com.google.android.exoplayer:exoplayer:2.17.1'
+    implementation 'com.github.ed-george:AndroidVimeoExtractor:1.2.1'
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+//    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.4.0'
+//
+    implementation 'com.amitshekhar.android:android-networking:1.0.0'
+    implementation 'androidx.work:work-runtime:2.7.1'
+    implementation 'com.google.android.play:core:1.10.3'
+    implementation 'com.github.florent37:singledateandtimepicker:2.2.7'
+    implementation 'com.github.ovidos:linkedin-android-sdk:0.1.9'
+    implementation 'com.microsoft.identity.client:msal:1.4.0'
+    implementation 'com.microsoft.graph:microsoft-graph:1.5.+'
+
+}
+
+

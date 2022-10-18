@@ -1,0 +1,82 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MyApplication" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/appColor</item>
+        <item name="colorPrimaryVariant">@color/appColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="colorSecondary">@color/appColor</item>
+        <item name="colorSecondaryVariant">@color/appColor</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="RedAccent" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/black</item>
+    </style>
+
+
+    <style name="Theme.MyApplication.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.MyApplication.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyApplication.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--        <item name="android:windowBackground">@drawable/bg</item>-->
+    </style>
+
+    <style name="BottomTheme" parent="Theme.MaterialComponents.Light.DarkActionBar" />
+
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/appColor</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="CalenderViewCustom" parent="Theme.MaterialComponents">
+        <item name="android:textColor">@color/white</item>-->
+
+    </style>
+
+    <style name="roundedCornersImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_24sdp</item>
+    </style>
+
+    <style name="SeekBar" parent="Theme.MaterialComponents">
+        <item name="colorControlActivated">@color/appColor</item>
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <!--    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">-->
+    <!--        <item name="android:textColor">@color/foxus_month</item>-->
+    <!--        <item name="android:weekNumberColor">@color/foxus_month</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">-->
+    <!--        <item name="android:textColor">@color/foxus_month</item>-->
+    <!--    </style>-->
+
+    <style name="NavigationViewStyle">
+        <item name="android:textSize">@dimen/_12sdp</item> <!-- menu item text size-->
+        <item name="android:listPreferredItemHeightSmall">@dimen/_30sdp
+        </item><!-- menu item height-->
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorSecondary</item>
+        <item name="colorControlActivated">@color/selected_star</item>
+    </style>
+
+
+</resources>

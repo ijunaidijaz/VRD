@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_40sdp"
+    android:fontFamily="@font/montserrat_regular"
+    android:gravity="center_vertical"
+    android:hint="Select"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:textColor="@color/fade_black"
+    android:textColorHint="@color/black"
+    android:textSize="@dimen/_12sdp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+

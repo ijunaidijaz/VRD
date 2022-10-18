@@ -1,0 +1,16 @@
+{
+  "client_id" : "f12d818b-b10b-4fe7-b6df-b87223a2c4d8",
+  "authorization_user_agent" : "DEFAULT",
+  "redirect_uri" : "msauth://com.vrd.gsaf/DINSKlRVa6SF0hmLy%2BkPC4GH8E4%3D",
+  "broker_redirect_uri_registered" : true,
+  "account_mode" : "SINGLE",
+  "authorities" : [
+    {
+      "type": "AAD",
+      "audience": {
+        "type": "AzureADMyOrg",
+        "tenant_id": "a04f7512-ad41-4cbf-be48-148a6698e2c7"
+      }
+    }
+  ]
+}

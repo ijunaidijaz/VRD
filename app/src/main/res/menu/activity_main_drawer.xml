@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+        <item
+            android:id="@+id/nav_reception"
+            android:icon="@drawable/monitor"
+            android:title="Reception" />
+        <item
+            android:id="@+id/nav_exhibitions"
+            android:icon="@drawable/ic_exhibitors"
+            android:title="@string/exhibitions"
+            android:visible="true" />
+
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/dashboard"
+            android:title="@string/dashboard" />
+
+        <item
+            android:id="@+id/nav_conference_agenda"
+            android:icon="@drawable/conference"
+            android:title="@string/conference_agenda" />
+
+        <item
+            android:id="@+id/nav_stage_conference_agenda"
+            android:icon="@drawable/conference"
+            android:title="@string/stage_conference_agenda" />
+        <item
+            android:id="@+id/nav_speakers_agenda"
+            android:icon="@drawable/conference"
+            android:title="@string/speakers_agenda" />
+        <item
+            android:id="@+id/nav_speaskers"
+            android:icon="@drawable/speaker"
+            android:title="@string/speakers" />
+
+        <item
+            android:id="@+id/nav_companies"
+            android:icon="@drawable/company"
+            android:title="@string/companies" />
+
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_about_"
+            android:title="@string/about_us" />
+
+        <item
+            android:id="@+id/nav_networking"
+            android:icon="@drawable/ic_group"
+            android:title="@string/networking_table" />
+
+        <item
+
+            android:id="@+id/nav_jobs"
+            android:icon="@drawable/jobs"
+            android:title="@string/dashBoardJobs" />
+
+        <item
+            android:id="@+id/nav_courses"
+            android:icon="@drawable/courses_dashboard"
+            android:title="@string/courses" />
+        <item
+            android:id="@+id/nav_goodie_bags"
+            android:icon="@drawable/goodie"
+            android:title="@string/goodie_bag"
+            app:actionViewClass="android.widget.TextView" />
+
+
+        <item
+            android:id="@+id/nav_need_help"
+            android:icon="@drawable/need_help"
+            android:title="Need Help" />
+
+        <item
+            android:id="@+id/nav_faq"
+            android:icon="@drawable/faq"
+            android:title="FAQ" />
+
+        <item
+            android:id="@+id/nav_exit_survey"
+            android:icon="@drawable/survey"
+            android:title="@string/exit_survey" />
+
+
+        <item
+            android:id="@+id/nav_faq1"
+            android:title="" />
+
+        <item
+            android:id="@+id/nav_faq2"
+            android:title="" />
+
+        <item
+            android:id="@+id/nav_faq3"
+            android:title="" />
+
+
+    </group>
+</menu>

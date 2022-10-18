@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".registration.Splash">
+
+
+    <include
+        android:id="@+id/noDataLayout"
+        layout="@layout/splash_image"
+        android:visibility="visible"></include>
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        xmlns:tools="http://schemas.android.com/tools"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@drawable/bg"-->
+    <!--        tools:context=".activity.SplashActivity">-->
+
+    <!--        -->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/logo"-->
+    <!--            app:layout_constraintVertical_weight="5"-->
+    <!--            android:layout_width="@dimen/_240sdp"-->
+    <!--            android:layout_height="@dimen/_130sdp"-->
+    <!--            android:layout_marginRight="@dimen/_56sdp"-->
+    <!--            android:layout_marginLeft="@dimen/_56sdp"-->
+    <!--            android:background="@drawable/logo"-->
+    <!--            app:layout_constraintHorizontal_weight="5"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintBottom_toTopOf="@id/tagLineLayout"-->
+    <!--            app:layout_constraintRight_toRightOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/tagLineLayout"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:layout_constraintTop_toBottomOf="@+id/logo"-->
+    <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--            app:layout_constraintRight_toRightOf="parent"-->
+    <!--            app:layout_constraintHorizontal_weight="5"-->
+    <!--            android:padding="@dimen/_16sdp"-->
+    <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+
+    <!--            app:layout_constraintVertical_weight="5">-->
+
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt1"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="@dimen/_5sdp"-->
+    <!--                android:text="The Future of "-->
+    <!--                android:textColor="#ffffff"-->
+    <!--                android:textSize="@dimen/_18sdp"-->
+    <!--                android:fontFamily="@font/montserrat_light"-->
+
+    <!--                app:layout_constraintBottom_toTopOf="@id/txt2"-->
+    <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--                app:layout_constraintRight_toRightOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_margin="@dimen/_5sdp"-->
+
+    <!--                android:id="@+id/txt2"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="RECRUITMENT"-->
+    <!--                android:fontFamily="@font/montserrat_semi_bold"-->
+    <!--                android:textAllCaps="true"-->
+    <!--                android:textColor="#ffffff"-->
+    <!--                android:textSize="@dimen/_34sdp"-->
+    <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--                app:layout_constraintRight_toRightOf="parent"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/txt1" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/txt3"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="@dimen/_5sdp"-->
+    <!--                android:text="Is Virtual"-->
+    <!--                android:textColor="#ffffff"-->
+    <!--                android:textSize="@dimen/_18sdp"-->
+    <!--                android:fontFamily="@font/montserrat_light"-->
+
+    <!--                android:layout_margin="@dimen/_5sdp"-->
+
+    <!--                app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--                app:layout_constraintRight_toRightOf="parent"-->
+    <!--                android:layout_marginBottom="@dimen/_16sdp"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/txt2" />-->
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</FrameLayout>
